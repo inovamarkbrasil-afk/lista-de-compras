@@ -5,62 +5,84 @@
 }
 
 body {
-  background-color: #fff7f0;
+  background: linear-gradient(135deg, #ff7a00, #fff3e6);
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #222;
+  min-height: 100vh;
+  padding: 24px;
 }
 
 main {
   width: 100%;
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px;
   background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
 
 .botao-voltar {
-  background-color: transparent;
+  background-color: #ffffff;
   color: #ff7a00;
   border: 1px solid #ff7a00;
 }
 
+.cabecalho {
+  text-align: center;
+  margin: 24px 0 32px;
+}
+
+.icone-carrinho {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
 h1 {
-  margin: 24px 0;
-  font-size: 32px;
+  font-size: 42px;
   color: #ff7a00;
+  margin-bottom: 8px;
+}
+
+.cabecalho p {
+  color: #666;
+  font-size: 18px;
 }
 
 .area-adicionar {
   display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 28px;
 }
 
 input[type="text"] {
   flex: 1;
-  padding: 12px;
+  padding: 16px;
   border: 1px solid #ffd2a3;
-  border-radius: 10px;
+  border-radius: 14px;
   outline: none;
+  font-size: 16px;
 }
 
 input[type="text"]:focus {
   border-color: #ff7a00;
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.15);
 }
 
 button {
   cursor: pointer;
   border: none;
-  border-radius: 10px;
-  padding: 12px 14px;
+  border-radius: 14px;
+  padding: 14px 18px;
   background-color: #ff7a00;
   color: white;
   font-weight: bold;
+  font-size: 15px;
+  transition: 0.2s;
 }
 
 button:hover {
+  transform: translateY(-2px);
   background-color: #e66a00;
 }
 
@@ -71,23 +93,34 @@ ul {
 li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background-color: #fff3e6;
-  padding: 14px;
-  border-radius: 12px;
-  margin-bottom: 10px;
+  gap: 14px;
+  background-color: #fff8f0;
+  padding: 16px;
+  border: 1px solid #ffe0bf;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 li span {
   flex: 1;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 li button {
-  background-color: #ff4d4d;
+  background-color: #ffe0e0;
+  color: #ff3030;
+  padding: 12px 14px;
 }
 
 li button:hover {
-  background-color: #d93636;
+  background-color: #ffcccc;
 }
 
 .concluido {
@@ -99,7 +132,30 @@ li button:hover {
 }
 
 #mensagem {
-  margin-top: 16px;
+  margin-top: 20px;
   color: #ff7a00;
   font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .area-adicionar {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
 }

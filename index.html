@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Compras</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <main>
-    <button class="botao-voltar">Voltar</button>
+    <button class="botao-voltar">← Voltar</button>
 
-    <h1>Lista de Compras</h1>
+    <section class="cabecalho">
+      <div class="icone-carrinho">🛒</div>
+      <h1>Lista de Compras</h1>
+      <p>Organize suas compras de forma simples</p>
+    </section>
 
     <div class="area-adicionar">
       <input id="input-item" type="text" placeholder="Ex: Arroz, leite, pão...">
-      <button id="botao-adicionar">Adicionar item</button>
+      <button id="botao-adicionar">+ Adicionar item</button>
     </div>
 
     <ul id="lista-compras"></ul>
